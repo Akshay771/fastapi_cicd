@@ -4,7 +4,7 @@ steps:
   - name: 'python:3.11-slim'
     entrypoint: 'pip'
     args: ['install', '-r', 'requirements.txt']
-    id: 'install-dependencies'
+    # id: 'install-dependencies'
 
   # # Step 2: Run tests (if you have tests)
   # - name: 'python:3.11-slim'
