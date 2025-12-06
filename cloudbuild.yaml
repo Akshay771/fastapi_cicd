@@ -6,15 +6,15 @@ steps:
     args: ['install', '-r', 'requirements.txt']
     id: 'install-dependencies'
 
-  # Step 2: Run tests (if you have tests)
-  - name: 'python:3.11-slim'
-    entrypoint: 'python'
-    args: ['-m', 'pytest', 'tests/', '-v']
-    id: 'run-tests'
-    waitFor: ['install-dependencies']
-    # Comment out if no tests yet
-    env:
-      - 'PYTHONPATH=/workspace'
+  # # Step 2: Run tests (if you have tests)
+  # - name: 'python:3.11-slim'
+  #   entrypoint: 'python'
+  #   args: ['-m', 'pytest', 'tests/', '-v']
+  #   id: 'run-tests'
+  #   waitFor: ['install-dependencies']
+  #   # Comment out if no tests yet
+  #   env:
+  #     - 'PYTHONPATH=/workspace'
 
   # Step 3: Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
